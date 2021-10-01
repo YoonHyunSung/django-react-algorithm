@@ -8,6 +8,7 @@ const MainNavi = () =>(
     <NaviItem><Link to='hook'>Hook</Link></NaviItem>
     <NaviItem><Link to='counter'>counter</Link></NaviItem>
     <NaviItem><Link to='todo'>Todo</Link></NaviItem>
+    <NaviItem><Link to='sign-up'>SignUp</Link></NaviItem>
     <NaviItem><Link to='algorithm-pages'>Algorithm</Link></NaviItem>
     
     <NaviItem><Link to='data-structure-pages' >DataStructure</Link></NaviItem>

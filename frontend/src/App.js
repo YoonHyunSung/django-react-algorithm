@@ -1,14 +1,30 @@
 import {Route, Switch, Redirect } from 'react-router-dom';
 import { DynamicConquer,
-        Greedy, DivideConquer, BruteForce, BackTracking, AlgorithmPages, AlgorithmNavi} 
+        Greedy,
+        DivideConquer,
+        BruteForce,
+        BackTracking,
+        AlgorithmPages,
+        AlgorithmNavi} 
         from 'algorithm/index';
-import {DataStructureNavi, DataStructurePages, Linear, NonLinear} from 'dataStructure/index'
-import {Counter, Home, MainNavi, SignIn, Todo} from 'common/index'
-import {createStore, combineReducers} from 'redux'
-import {Provider} from 'react-redux'
-import {todoReducer} from 'reducers'
-const rootReducer = combineReducers({todoReducer})
+import {DataStructureNavi,
+        DataStructurePages,
+        Linear,
+        NonLinear}
+        from 'dataStructure/index';
+import {Counter,
+        Home,
+        MainNavi,
+        SignIn,
+        SignUp,
+        Todo}
+        from 'common/index';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
+import {todoReducer, userReducer} from 'reducers';
+const rootReducer = combineReducers({todoReducer, userReducer})
 const store = createStore(rootReducer)
+
 
 const App = () => {
   return(
@@ -16,10 +32,12 @@ const App = () => {
     <Provider store={store}> 
       <MainNavi/>
       <Switch>
+            
             <Route exact path='/' component= { Home }/>
             <Redirect from='/home' to= { '/' }/>
             <Route exact path='/sign-in' component={SignIn}/>
             <Route exact path='/counter' component={Counter}/>
+            <Route exact path='/sign-up' component={SignUp}/>
             <Route exact path='/todo' component={Todo}/>
             <Route exact path='/data-structure-navi' component={DataStructureNavi}/>
 
@@ -36,6 +54,7 @@ const App = () => {
             <Route exact path='/linear' component={Linear}/>
             <Route exact path='/non-linear' component={NonLinear}/>
             <Route exact path='/math' component={Math}/>
+
       </Switch>
     </Provider>
   </>

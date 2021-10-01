@@ -1,15 +1,18 @@
-import SignIn from "common/containers/SignIn"
-import React from "react"
-
+import React from 'react';
+import { SignIn } from "common/index";
+import { connect } from 'api/index';
 
 export default function Home(){
-    return(
-    
-    <div>
+    const handleClick = e => {
+        e.preventDefault()
+        alert(' Home Click ')
+        connect()
+        .then(res => {alert(`접속성공 : ${res.data.connection}`)})
+        .catch(err => {alert(`접속 실패: ${err}`)})
+    }
+    return (<div>
+        <button onClick={handleClick} >Connection</button>
         <SignIn/>
-    </div>
-
-
-    
-    )
+        
+    </div>)
 }
