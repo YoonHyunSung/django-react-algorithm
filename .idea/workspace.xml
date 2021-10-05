@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="698c9ddf-9b02-4052-92be-664d1bf6116a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/my-django/admin/common/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/my-django/admin/common/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/.ipynb_checkpoints/Housing-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/02_end_to_end_machine_learning_project.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/Housing.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/dataset/gdp_per_capita.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/dataset/housing.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/dataset/imagenet_class_names.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/dataset/oecd_bli_2015.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/dataset/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/dataset/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/datasets/housing/housing.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/datasets/housing/housing.tgz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/attribute_histogram_plots.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/bad_visualization_plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/better_visualization_plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/california.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/california_housing_prices_plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/housing_prices_scatterplot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/income_vs_house_value_scatterplot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/images/end_to_end_project/scatter_matrix_plot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/my-django/myjupyter/my_model.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/jsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/components/AlgorithmNavi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/components/BackTracking.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/components/BruteForce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/components/DivideConquer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/components/DynamicConquer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/components/Greedy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/algorithm/pages/AlgorithmPages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/Counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/MainNavi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/TodoInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/TodoList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/UserJoin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/UserList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/containers/SignIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/containers/SignUp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/containers/Todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/BubbleSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/DataStructureNavi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/Linear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/Math.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/MergeSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/N11_MultiplicationofArrangementExcludingYourself.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/NonLinear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/components/QuickSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/dataStructure/pages/DataStructurePages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/todo.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/user.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1z4fftxvJenhHnIl7URgEy7Yyy7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="698c9ddf-9b02-4052-92be-664d1bf6116a" name="Changes" comment="" />
+      <created>1633412389052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1633412389052</updated>
+      <workItem from="1633412391008" duration="8000" />
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { SignIn } from "common/index";
-import { connect } from 'api/index';
+import { SignIn } from "features/users";
+import { connect } from 'common/modules/commonAPI';
+
 
 export default function Home(){
     const handleClick = e => {
@@ -16,3 +17,4 @@ export default function Home(){
         
     </div>)
 }
+   

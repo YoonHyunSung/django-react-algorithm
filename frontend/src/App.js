@@ -1,63 +1,36 @@
-import {Route, Switch, Redirect } from 'react-router-dom';
-import { DynamicConquer,
-        Greedy,
-        DivideConquer,
-        BruteForce,
-        BackTracking,
-        AlgorithmPages,
-        AlgorithmNavi} 
-        from 'algorithm/index';
-import {DataStructureNavi,
-        DataStructurePages,
-        Linear,
-        NonLinear}
-        from 'dataStructure/index';
-import {Counter,
-        Home,
-        MainNavi,
-        SignIn,
-        SignUp,
-        Todo}
-        from 'common/index';
-import {createStore, combineReducers} from 'redux';
-import {Provider} from 'react-redux';
-import {todoReducer, userReducer} from 'reducers';
-const rootReducer = combineReducers({todoReducer, userReducer})
-const store = createStore(rootReducer)
+import React from "react";
+import { Route,Switch, Redirect } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { Navi, Home } from "common";
+import { BackTracking, BruteForce, DivideConquer, DynamicConquer, Greedy } from "./features/algorithms";
+//import { Counter } from "features/counter";
+import { CounterOld } from "features/counterOld";
+import { Linear, NonLinear, Mathematics } from "features/datastructure";
+import { TodoInput, TodoList, Todo } from "features/todos";
+import { UserJoin, UserList, SignIn, SignUp } from "features/users";
+import { store } from "./app/store";
 
 
 const App = () => {
   return(
- <>
-    <Provider store={store}> 
-      <MainNavi/>
+    <Provider store={store}>
+    <Navi/>
       <Switch>
-            
-            <Route exact path='/' component= { Home }/>
-            <Redirect from='/home' to= { '/' }/>
-            <Route exact path='/sign-in' component={SignIn}/>
-            <Route exact path='/counter' component={Counter}/>
-            <Route exact path='/sign-up' component={SignUp}/>
-            <Route exact path='/todo' component={Todo}/>
-            <Route exact path='/data-structure-navi' component={DataStructureNavi}/>
-
-            <Route exact path='/algorithm-pages' component={AlgorithmPages}/>
-            <Route exact path='/algoritm-navi' component={AlgorithmNavi}/>
-            <Route exact path='/dynamic-conquer' component={DynamicConquer}/>
-            <Route exact path='/greedy' component={Greedy}/>
-            <Route exact path='/divide-conquer' component={DivideConquer}/>
-            <Route exact path='/brute-force' component={BruteForce}/>
-            <Route exact path='/back-tracking' component={BackTracking}/>
-
-            <Route exact path='/data-structure-pages' component={DataStructurePages}/>
-
-            <Route exact path='/linear' component={Linear}/>
-            <Route exact path='/non-linear' component={NonLinear}/>
-            <Route exact path='/math' component={Math}/>
-
+        <Route exact path = '/' component = {Home}/>
+        <Redirect from='/home' to= { '/' }/>
+        <Route exact path = '/counter-old' component = {CounterOld}/>
+        <Route exact path = '/todo' component = {Todo}/>
+        <Route exact path = '/sign-up' component = {SignUp}/>
+        <Route exact path = '/mathematics' component = {Mathematics}/>
+        <Route exact path = '/linear' component = {Linear}/>
+        <Route exact path = '/nonLinear' component = {NonLinear}/>
+        <Route exact path = '/back-tracking' component = {BackTracking}/>
+        <Route exact path = '/brute-force' component = {BruteForce}/>
+        <Route exact path = '/divide-conquer' component = {DivideConquer}/>
+        <Route exact path = '/dynanmic-conquer' component = {DynamicConquer}/>
+        <Route exact path = '/greedy' component = {Greedy}/>
       </Switch>
-    </Provider>
-  </>
+  </Provider>
   )
 };
 export default App;
