@@ -28,6 +28,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'admin.crime',
     'admin.common',
     'admin.housing',
     'admin.user',

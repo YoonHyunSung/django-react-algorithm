@@ -1,7 +1,12 @@
+
+from abc import abstractmethod, ABCMeta
+
 import pandas as pd
 from django.db import models
 from dataclasses import dataclass
 from icecream import ic
+import json
+import googlemaps
 
 
 @dataclass
@@ -10,10 +15,31 @@ class DFrameGenerator(object):
     test: object
     id: str
     label: str
-    fname: object
+    fname: str
+    context: str
+    url: str
+    dframe: object
 
     @property
-    def fname(self) -> object: return self._fname
+    def dframe(self) -> object: return self._dframe
+
+    @dframe.setter
+    def dframe(self, dframe): self._dframe = dframe
+
+    @property
+    def url(self) -> str: return self._url
+
+    @url.setter
+    def url(self, url): self._url = url
+
+    @property
+    def context(self) -> str: return self._context
+
+    @context.setter
+    def context(self, context): self._context = context
+
+    @property
+    def fname(self) -> str: return self._fname
 
     @fname.setter
     def fname(self, fname): self._fname = fname
@@ -42,6 +68,7 @@ class DFrameGenerator(object):
     @label.setter
     def label(self, label): self._label = label
 
+
     def create_model(self):
         return pd.read_csv(self.fname)
 
@@ -50,3 +77,54 @@ class DFrameGenerator(object):
         ic(model.tail(3))
         ic(model.info())
         ic(model.describe())
+
+
+
+
+class ReaderBase(metaclass = ABCMeta):
+    @abstractmethod
+    def new_file(self):
+        pass
+    @abstractmethod
+    def csv(self):
+        pass
+    @abstractmethod
+    def xls(self):
+        pass
+    @abstractmethod
+    def json(self):
+        pass
+
+class PrinterBase(metaclass=ABCMeta):
+    @abstractmethod
+    def dframe(self):
+        pass
+
+class Reader(ReaderBase):
+    def new_file(self, file)-> str:
+        return file.context + file.fname
+
+    def csv(self, file) -> object:
+        return pd.read_csv(f'{file}.csv', encoding='CP949',thousands=',')
+
+    def csv_header(self, file,header) -> object:
+        return pd.read_csv(f'{file}.csv', encoding='CP949' , thousands=',',header=header)
+
+
+    def xls(self, file, header, usecols)-> object:
+        return pd.read_excel(f'{file}.xls',header=header ,usecols=usecols)
+
+
+    def json(self, file)-> object:
+        return pd.read_json(f'{file}.json', encoding='CP949')
+
+    def gmaps(self) -> object:
+        return googlemaps.Client(key='')
+
+class Printer(PrinterBase):
+
+    def dframe(self, this):
+        ic(this.head(3))
+        ic(this.tail(3))
+        ic(this.info())
+        ic(this.isnull().sum())
