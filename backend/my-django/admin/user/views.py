@@ -7,7 +7,7 @@ from rest_framework.parsers import JSONParser
 from admin.user.models import User
 from admin.user.serializer import UserSerializer
 
-@api_view(['GET','POST'])
+@api_view(['GET','POST','PUT'])
 @parser_classes([JSONParser])
 def users(request):
     if request.method == 'GET':
@@ -15,10 +15,47 @@ def users(request):
         serializer = UserSerializer(all_users, many=True)
         return JsonResponse(data = serializer, safe = False)
     elif request.method == 'POST':
-        new_user = request.data['body']
-        ic(new_user)
-        serializer = UserSerializer(data = new_user['user'])
+        serializer = UserSerializer(data = request.data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse({'result' : f'Welcome, {serializer.data.get("name")}'}, status=201)
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'PUT':
+
+        return None
+
+@api_view(['DELETE'])
+def remove(request, username):
+    pass
+@api_view(['GET'])
+def detail(request, username):
+    ic(username)
+    dbUser = User.objects.get(pk=username)
+    ic(dbUser)
+    userSerializer = UserSerializer(dbUser, many=False)
+    ic(userSerializer)
+    return JsonResponse(data=userSerializer.data, safe=False)
+
+@api_view(['POST'])
+def login(request):
+    print('+++++++ try 밖에 있음 ++++++++')
+    try:
+        loginUser = request.data
+        # print(f'{type(loginUser)}') # <class 'dict'>
+        ic(loginUser)
+        dbUser = User.objects.get(pk=loginUser['username'])
+        # print(f'{type(dbUser)}') # <class 'admin.user.models.User'>
+        ic(dbUser)
+        if loginUser['password'] == dbUser.password:
+            print('******** 로그인 성공')
+            userSerializer = UserSerializer(dbUser, many=False)
+            ic(userSerializer)
+            return JsonResponse(data=userSerializer.data, safe=False)
+        else:
+            print('******** 비밀번호 오류')
+            return JsonResponse(data={'result': 'PASSWORD-FAIL'}, status=201)
+
+    except User.DoesNotExist:
+        print('*' * 50)
+        print('******** Username 오류')
+        return JsonResponse(data={'result': 'USERNAME-FAIL'}, status=201)

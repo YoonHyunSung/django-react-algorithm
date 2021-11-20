@@ -28,10 +28,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin.crime',
+    'admin.user',
     'admin.common',
     'admin.housing',
-    'admin.user',
+    'admin.crime',
+    'admin.crawling',
+    'admin.tensor',
+    'admin.ai_trader',
+    'admin.myCNN',
+    'admin.myCV2',
+    'admin.myGAN',
+    'admin.myGRU',
+    'admin.myLSTM',
+    'admin.myNLP',
+    'admin.myRNN',
     'rest_framework',
     'corsheaders',
     'django.contrib.admin',
@@ -41,9 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000', 'http://localhost:3000']
+CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000' ,'http://localhost:3000']
 CORS_ALLOW_CREDENTIALS = True
-
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -85,8 +94,8 @@ DATABASES = {
         'NAME': 'mariadb',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306'
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
     }
 }
 
@@ -125,6 +134,7 @@ USE_TZ = True
 
 TIME_ZONE = 'Asia/Seoul'
 
+USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 

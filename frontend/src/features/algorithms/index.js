@@ -1,5 +1,0 @@
-export {default as BackTracking} from './containers/BackTracking'
-export {default as BruteForce} from './containers/BruteForce'
-export {default as DivideConquer} from './containers/DivideConquer'
-export {default as DynamicConquer} from './containers/DynamicConquer'
-export {default as Greedy} from './containers/Greedy'

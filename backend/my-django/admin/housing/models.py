@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from django.db import models
-from admin.common.models import DFrameGenerator
+from admin.common.models import ValueObject
 import pandas as pd
 from sklearn.model_selection import train_test_split, StratifiedShuffleSplit
 from icecream import ic
@@ -9,7 +9,7 @@ from icecream import ic
 
 class HousingService(object):
     def __init__(self):
-        self.dfg = DFrameGenerator()
+        self.dfg = ValueObject()
         self.dfg.fname = 'admin/housing/data/housing.csv'
         self.df = self.dfg.create_model()
 

@@ -17,3 +17,30 @@ def Crime_view(request):
 def create_police_position(request):
     CrimeCctvModel().create_police_position()
     return JsonResponse({'result': 'Create Police Position Success'})
+
+@api_view(['GET'])
+@parser_classes([JSONParser])
+def create_cctv_model(request):
+    CrimeCctvModel().create_cctv_model()
+    return JsonResponse({'result' :'create cctv model'})
+
+@api_view(['GET'])
+@parser_classes([JSONParser])
+def create_population_model(request):
+    CrimeCctvModel().create_population_model()
+    return JsonResponse({'result' :'create population model'})
+
+@api_view(['GET'])
+@parser_classes([JSONParser])
+def merge_cctv_pop(request):
+    CrimeCctvModel().merge_cctv_pop()
+    return JsonResponse({'result' :'create cctv pop merge'})
+
+
+@api_view(['GET'])
+@parser_classes([JSONParser])
+def crime_sum(request):
+    CrimeCctvModel().crime_sum()
+    return JsonResponse({'result' :'sum crime'})
+
+

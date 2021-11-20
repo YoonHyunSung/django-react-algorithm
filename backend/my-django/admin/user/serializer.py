@@ -4,7 +4,6 @@ from .models import User as user
 
 
 class UserSerializer(serializers.Serializer):
-
     username = serializers.CharField()
     password = serializers.CharField()
     name = serializers.CharField()

@@ -10,7 +10,7 @@ import googlemaps
 
 
 @dataclass
-class DFrameGenerator(object):
+class ValueObject(object):
     train: object
     test: object
     id: str
@@ -105,10 +105,10 @@ class Reader(ReaderBase):
         return file.context + file.fname
 
     def csv(self, file) -> object:
-        return pd.read_csv(f'{file}.csv', encoding='CP949',thousands=',')
+        return pd.read_csv(f'{file}.csv', encoding='UTF-8',thousands=',')
 
     def csv_header(self, file,header) -> object:
-        return pd.read_csv(f'{file}.csv', encoding='CP949' , thousands=',',header=header)
+        return pd.read_csv(f'{file}.csv', encoding='UTF-8' , thousands=',',header=header)
 
 
     def xls(self, file, header, usecols)-> object:
@@ -116,7 +116,7 @@ class Reader(ReaderBase):
 
 
     def json(self, file)-> object:
-        return pd.read_json(f'{file}.json', encoding='CP949')
+        return pd.read_json(f'{file}.json', encoding='UTF-8')
 
     def gmaps(self) -> object:
         return googlemaps.Client(key='')
